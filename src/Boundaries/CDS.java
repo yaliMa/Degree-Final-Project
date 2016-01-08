@@ -1,25 +1,32 @@
-package Boundaries;
+/**
+ * 
+ * @author Yael Mathov
+ */
 
+package Boundaries;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class CDS extends Boundaries{
 	
-	/********************************************************************/
+	
 	/*************************** Constructors ***************************/
-	/********************************************************************/
 	public CDS(int _start, int _end) {
 		super(_start, _end);
 	}
 	
-	// copy constructor 
+	//------------------------------------------------------------------//
+	// Copy Constructor 
 	public CDS(CDS _other) {
 		super(_other);
 	}
 	
-	/**************** JSON ******************
-	 * @throws JSONException ****************/
-
+	
+	/****************************** JSON *********************************
+	 * This method parse the CDS object to JSON object.
+	 * variable parsing: (m_start, m_end)
+	 * @throws JSONException 
+	 */
 	public JSONObject CDSToJson() throws JSONException
 	{
 		JSONObject json = new JSONObject();
@@ -30,7 +37,7 @@ public class CDS extends Boundaries{
 		return json;
 	}
 	
-	/************** toString **************/
+	/***************************** toString *****************************/
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
